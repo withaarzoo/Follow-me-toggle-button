@@ -1,0 +1,60 @@
+* {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#button {
+    position: relative;
+    display: block;
+    width: 700px;
+    height: 350px;
+    background-color: #000;
+    border-radius: 350px;
+    cursor: pointer;
+    transform: scale(0.4);
+    margin: 50px auto;
+}
+
+#knob {
+    width: 290px;
+    height: 290px;
+    background-image: url("cbimage.png");
+    background-size: 700px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    border-radius: 290px;
+    transition: 0.4s ease left, 0.4s ease background-position;
+    z-index: 2;
+}
+
+#subscribe,
+#alright {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 58px;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 389px;
+    z-index: 1;
+}
+
+#alright {
+    margin-left: 30px;
+}
+
+#lol-checkbox:checked+#button #knob {
+    left: 380px;
+    background-position: -350px 0;
+}
